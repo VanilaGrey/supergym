@@ -1,9 +1,9 @@
 import initLazy from './modules/init-lazy.js';
+import initVideo from './modules/video.js';
 
 initLazy(() => {
-  // сюда следует добавить скрипты, не участвующие в работе первого экрана
+  document.querySelectorAll('.video').forEach(initVideo);
 });
-
 // привязывайте js не на классы, а на дата-атрибуты (data-validate)
 
 // вместо модификаторов .block--active используем утилитарные классы

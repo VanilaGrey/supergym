@@ -1,0 +1,11 @@
+<section class="about-section container">
+	<div class="about-section__content">
+		{{ content }}
+	</div>
+	<div class="about-section__image">
+		{% include 'picture.twig' with image %}
+	</div>
+	<div class="about-section__video">
+		{% include 'video.twig' with video %}
+	</div>
+</section>
