@@ -2,4 +2,31 @@
 
 {% block main %}
 	{% include '../components/about-section.twig' with about %}
+
+{% include '../components/price-section.twig' with {
+		bemMix: 'page__price-section',
+		component: 'tabs',
+		decor: subscriptions.decor,
+		data: {
+			component: 'cards-list',
+			listComponent: 'card',
+			heading: subscriptions.heading,
+			tabs: subscriptions.groups
+		}
+	} %}
+
+{% include '../components/event.twig' with event|merge({
+		bemMix: 'page__event container'
+	}) %}
+
+	<section class="page__trainers container">
+		<h2 class="page__heading heading">{{ trainers.heading }}</h2>
+		{% include '../components/slider.twig' with {
+			bemMix: 'page__slider page__slider--wide',
+			component: 'figure',
+			multiple: true,
+			slides: trainers.list
+		} %}
+	</section>
+
 {% endblock %}

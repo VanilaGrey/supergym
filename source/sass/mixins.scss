@@ -80,6 +80,27 @@
   }
 }
 
+@mixin custom-scrollbar($color-thumb, $color-track, $size: 4px) {
+  scrollbar-color: $color-thumb $color-track;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background-color: $color-track;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-track;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-thumb;
+    border: none;
+    border-radius: calc($size / 4);
+  }
+}
+
 @mixin focus($in: false) {
   @if $in {
     &:focus-within {

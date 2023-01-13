@@ -1,8 +1,12 @@
 import initLazy from './modules/init-lazy.js';
+import initSlider from './modules/slider.js';
+import initTabs from './modules/tabs.js';
 import initVideo from './modules/video.js';
 
 initLazy(() => {
-  document.querySelectorAll('.video').forEach(initVideo);
+  document.querySelectorAll('[data-tabs]').forEach(initTabs);
+  document.querySelectorAll('[data-slider]').forEach(initSlider);
+  document.querySelectorAll('[data-video]').forEach(initVideo);
 });
 // привязывайте js не на классы, а на дата-атрибуты (data-validate)
 
