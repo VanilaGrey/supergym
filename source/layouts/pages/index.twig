@@ -29,4 +29,9 @@
 		} %}
 	</section>
 
+	{% include '../components/advantages.twig' with {
+		bemMix: 'page__advantages',
+		data: advantages,
+	} %}
+
 {% endblock %}

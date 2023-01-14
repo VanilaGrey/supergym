@@ -1,0 +1,13 @@
+<section class="advantages {{ bemMix }}">
+	<div class="advantages__inner container"></div>
+	<h2 class="advantages__heading heading">{{ data.heading }}</h2>
+	<ul class="advantages__list advantages__body">
+		{% for advantage in data.list %}
+			<li class="advantages__{{ advantage.center ? 'center' : 'item' }}">
+				<p class="advantages__{{ advantage.center ? 'center-' }}value">{{ advantage.value }}</p>
+				<p class="advantages__{{ advantage.center ? 'center-' }}key">{{ advantage.key }}</p>
+				<div class="advantages__content">{{ advantage.content }}</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div></section>

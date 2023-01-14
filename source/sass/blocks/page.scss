@@ -25,21 +25,37 @@
   margin-bottom: 91px;
 }
 
+.page__advantages {
+  margin-bottom: 150px;
+}
+
 .page__slider {
-  width: 560px;
+  width: 680px;
   margin: 0 auto;
+
+  @include vp-1199 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 395px;
+  }
+
+  @include vp-424 {
+    width: 290px;
+  }
 
   &--wide {
     width: calc(100% + 120px);
     margin: 0 0 0 -60px;
 
-    @include vp-1249 {
+    @include vp-1299 {
       width: 980px;
       margin: 0 auto;
     }
 
-    @include vp-1099 {
-      width: 680px;
+    @include vp-767 {
+      width: 332px;
     }
   }
 }

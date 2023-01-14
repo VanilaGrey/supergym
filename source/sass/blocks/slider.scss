@@ -2,10 +2,22 @@
   position: relative;
   touch-action: pan-y;
   padding: 0 60px;
+
+  @include vp-1199 {
+    padding: 0 56px;
+  }
+
+  @include vp-767 {
+    padding: 0 32px;
+  }
 }
 
 .slider__body {
   overflow: hidden;
+
+  &--shadow {
+    box-shadow: 0 0 40px rgba($color-resolution-blue, 0.2);
+  }
 }
 
 .slider__list {
@@ -18,9 +30,18 @@
 
 .slider__item {
   flex-shrink: 0;
+  max-width: 100%;
 
   &--card {
     width: 260px;
+
+    @include vp-1199 {
+      width: 268px;
+    }
+
+    @include vp-767 {
+      width: 226px;
+    }
   }
 }
 
@@ -43,6 +64,11 @@
 
   @include default-interactive;
 
+  @include vp-767 {
+    width: 15px;
+    height: 22px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -51,10 +77,20 @@
     height: 23px;
     border-bottom: 1px solid $color-dark-gray;
     border-left: 1px solid $color-dark-gray;
+
+    @include vp-767 {
+      top: 3px;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &--prev {
     left: 0;
+
+    @include vp-1199 {
+      left: -4px;
+    }
 
     &::before {
       left: 8px;
@@ -64,6 +100,10 @@
 
   &--next {
     right: 0;
+
+    @include vp-1199 {
+      right: -4px;
+    }
 
     &::before {
       right: 8px;
@@ -75,9 +115,10 @@
 .slider.no-js {
   .slider__list {
     flex-wrap: wrap;
+    gap: 40px;
 
-    &--gapped {
-      gap: 40px;
+    @include vp-1199 {
+      gap: 30px;
     }
   }
 
