@@ -3,7 +3,7 @@
 {% block main %}
 	{% include '../components/about-section.twig' with about %}
 
-{% include '../components/price-section.twig' with {
+	{% include '../components/price-section.twig' with {
 		bemMix: 'page__price-section',
 		component: 'tabs',
 		decor: subscriptions.decor,
@@ -15,7 +15,7 @@
 		}
 	} %}
 
-{% include '../components/event.twig' with event|merge({
+	{% include '../components/event.twig' with event|merge({
 		bemMix: 'page__event container'
 	}) %}
 
@@ -33,5 +33,9 @@
 		bemMix: 'page__advantages',
 		data: advantages,
 	} %}
+
+	{% include '../components/ad.twig' with ad|merge({
+		bemMix: 'page__ad container',
+	}) %}
 
 {% endblock %}

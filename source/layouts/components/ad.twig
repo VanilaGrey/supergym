@@ -1,0 +1,24 @@
+<section class="ad {{ bemMix }}">
+	<h2 class="ad__heading heading">{{ heading }}</h2>
+	<ul class="ad__list">
+
+		{% for item in list %}
+			<li class="ad__{{ item.image ? 'figure' : 'item' }}">
+				<article class="ad__content">
+					{{ item.content }}
+
+					<p class="ad__link-wrapper">
+						<a class="ad__link" href="{{ item.link.url }}">{{ item.link.title }}</a>
+					</p>
+				</article>
+
+				{% if item.image %}
+					<p class="ad__picture">
+						{% include 'picture.twig' with item.image %}
+					</p>
+				{% endif %}
+
+			</li>
+		{% endfor %}
+	</ul>
+</section>
