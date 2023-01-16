@@ -1,0 +1,8 @@
+<dl class="contacts {{ bemMix }}">
+	{% for contact in list %}
+		<div>
+			<dt class="contacts__key">{{ contact.key }}</dt>
+			<dd class="contacts__value">{{ contact.value }}</dd>
+		</div>
+	{% endfor %}
+</dl>

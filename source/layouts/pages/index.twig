@@ -38,4 +38,20 @@
 		bemMix: 'page__ad container',
 	}) %}
 
+	<section class="page__reviews container">
+		<h2 class="page__heading page__heading--review heading">{{ reviews.heading }}</h2>
+
+		{% include '../components/slider.twig' with {
+			bemMix: 'page__slider',
+			component: 'review',
+			slides: reviews.list,
+			shadow: true
+		} %}
+	</section>
+
+{% include '../components/content-group.twig' with { data: [
+		ticket|merge({ component: 'form' }),
+		contacts|merge({ component: 'contacts' })
+	] } %}
+
 {% endblock %}

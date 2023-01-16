@@ -225,5 +225,51 @@ export default ({getImages}) => {
         })
       ),
     },
+    reviews: {
+      heading: 'Отзывы',
+      list: Array.from({length: 3}, () => ({
+        author: 'Анна Орлова',
+        content: `<p>
+          «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+          дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+        </p>`,
+        image: getImages('avatar', {alt: 'Фото пользователя.'}, false, false),
+      })),
+    },
+    ticket: {
+      action: 'https://echo.htmlacademy.ru',
+      heading: 'Бесплатное занятие',
+      fields: [
+        `<input
+          id="ticket-name"
+          name="name"
+          type="text"
+          placeholder="Имя"
+          pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
+          required
+        />
+        <label for="ticket-name">Имя.</label>`,
+        `<input
+          id="ticket-phone"
+          name="phone"
+          type="tel"
+          placeholder="Телефон"
+          pattern="^\\+?[\\d ()-]+$"
+          required
+        />
+        <label for="ticket-phone">Телефон.</label>`,
+      ],
+      method: 'post',
+      submitText: 'Отправить',
+    },
+    contacts: {
+      heading: 'Контакты',
+      list: [
+        ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
+        ['Телефон:', '<a href="tel:+78005555555">8-800-555-55-55</a>'],
+        ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
+        ['Email:', '<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>'],
+      ].map(([key, value]) => ({key, value})),
+    },
   };
 };

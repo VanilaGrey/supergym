@@ -603,6 +603,8 @@ input[type=number]::-webkit-inner-spin-button {
   text-transform: uppercase;
   text-align: center;
   overflow-wrap: anywhere;
+  color: inherit;
+  background-color: transparent;
   border: 2px solid;
   border-radius: 0;
   cursor: pointer;
@@ -630,7 +632,14 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page__heading {
-  margin: 0 0 48px;
+  margin: 0 0 37px;
+  text-align: center;
+}
+
+.page__heading--alter {
+  margin-bottom: 48px;
+  -moz-text-align-last: left;
+  text-align-last: left;
 }
 
 .page__price-section {
@@ -642,7 +651,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page__trainers {
-  margin-bottom: 91px;
+  margin-bottom: 102px;
 }
 
 .page__advantages {
@@ -650,6 +659,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .page__ad {
+  margin-bottom: 117px;
+}
+
+.page__reviews {
   margin-bottom: 120px;
 }
 
@@ -1710,6 +1723,258 @@ input[type=number]::-webkit-inner-spin-button {
   line-height: 16px;
 }
 
+.review {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-content: start;
+  gap: 11px 28px;
+  padding: 54px 62px 55px;
+  color: #ffffff;
+  background-color: #1c3374;
+}
+
+.review__picture {
+  grid-row: span 2;
+  margin: 8px 0 0;
+}
+
+.review__image {
+  width: 100%;
+  height: 80px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review__author {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.review__content {
+  line-height: 23px;
+}
+
+.review__content p {
+  margin: 0;
+}
+
+.content-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.content-group__heading {
+  margin: 0 0 36px;
+}
+
+.content-group__item {
+  padding: 55px calc(100% - 580px) 65px 120px;
+  border-top: 1px solid #74819c;
+}
+
+.content-group__item:nth-child(4n),
+.content-group__item:nth-child(4n+1) {
+  color: #ffffff;
+  background-color: #102654;
+  border-color: transparent;
+}
+
+.content-group__item:nth-child(4n) .content-group__heading,
+.content-group__item:nth-child(4n+1) .content-group__heading {
+  margin-bottom: 15px;
+  font-weight: 800;
+  line-height: 1.56;
+}
+
+.content-group__item:nth-child(2n+1) {
+  padding-right: 170px;
+  padding-left: calc(100% - 580px);
+}
+
+.content-group__content {
+  margin: 0;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 30px;
+}
+
+.form__group {
+  margin: 0;
+}
+
+.form__group label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+.form__group input {
+  width: 100%;
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  outline-offset: -1px;
+}
+
+.form__submit {
+  grid-column: 1/-1;
+  padding: 16px 32px;
+  font-size: 14px;
+  line-height: 16px;
+  outline: 1px solid;
+}
+
+.contacts {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 120px;
+}
+
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  bottom: 6px;
+  left: 50%;
+  width: 1px;
+  background-color: #74819c;
+  transform: translateX(-50%);
+}
+
+.contacts__key {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.contacts__value {
+  margin: 0;
+  font-size: 14px;
+}
+
+.page-footer {
+  padding: 40px 0;
+  color: #ffffff;
+  background-color: #030a1a;
+}
+
+.page-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.page-footer__logo {
+  flex-shrink: 0;
+  width: 86px;
+  margin-top: 11px;
+}
+
+.page-footer__nav {
+  justify-content: center;
+  margin: 0 0 0 11px;
+}
+
+.page-footer__socials {
+  justify-content: flex-end;
+  min-width: 100px;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 41px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 14px;
+  line-height: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.nav__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .nav__link.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__item {
+  flex-shrink: 0;
+}
+
+.socials__link {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+.socials__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .socials__link.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.socials__link::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: #030a1a;
+}
+
+.socials__link--vk::before {
+  -webkit-mask: url("../img/sprite.svg#vk") no-repeat center/100%;
+  mask: url("../img/sprite.svg#vk") no-repeat center/100%;
+}
+
+.socials__link--ok::before {
+  -webkit-mask: url("../img/sprite.svg#ok") no-repeat center/100%;
+  mask: url("../img/sprite.svg#ok") no-repeat center/100%;
+}
+
+.socials__link--reddit::before {
+  -webkit-mask: url("../img/sprite.svg#reddit") no-repeat center/100%;
+  mask: url("../img/sprite.svg#reddit") no-repeat center/100%;
+}
+
 @media (min-width: 768px) {
   .mobile-show {
     display: none;
@@ -1729,7 +1994,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 @media (max-width: 1249px) {
-  .page__heading {
+  .page__heading--alter {
     text-align: center;
   }
 
@@ -1745,6 +2010,16 @@ input[type=number]::-webkit-inner-spin-button {
   .advantages__center {
     margin-right: 30px;
     margin-left: 30px;
+  }
+
+  .content-group__item {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .content-group__item:nth-child(2n+1) {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -2044,6 +2319,28 @@ input[type=number]::-webkit-inner-spin-button {
   .ad__link:active,
   .ad__link:hover:active,
   .ad__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .nav__link:hover,
+  .nav__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .nav__link:active,
+  .nav__link:hover:active,
+  .nav__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .socials__link:hover,
+  .socials__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .socials__link:active,
+  .socials__link:hover:active,
+  .socials__link.focus-visible:active {
     opacity: 0.5;
   }
 }

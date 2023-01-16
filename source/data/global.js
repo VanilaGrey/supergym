@@ -20,8 +20,47 @@ export default () => ({
     return image;
   },
   projectName: 'SUPERGYM',
+  navLinks: [
+    {
+      url: '#!',
+      title: 'Услуги',
+    },
+    {
+      url: '#!',
+      title: 'Абонементы',
+    },
+    {
+      url: '#!',
+      title: 'Акции',
+    },
+    {
+      url: '#!',
+      title: 'Тренеры',
+    },
+    {
+      url: '#!',
+      title: 'Расписание',
+    },
+  ],
+  socials: [
+    {
+      id: 'vk',
+      title: 'Мы в Контакте',
+      url: '#!',
+    },
+    {
+      id: 'ok',
+      title: 'Мы в Одноклассниках.',
+      url: '#!',
+    },
+    {
+      id: 'reddit',
+      title: 'Мы в Reddit',
+      url: '#!',
+    },
+  ],
   tel: {
     title: '8-800-555-55-55',
-    utl: 'tel:+78005555555',
+    url: 'tel:+78005555555',
   },
 });
