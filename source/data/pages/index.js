@@ -249,6 +249,7 @@ export default ({getImages}) => {
           pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
           required
         />
+        <strong>Пожалуйста, введите имя</strong>
         <label for="ticket-name">Имя.</label>`,
         `<input
           id="ticket-phone"
@@ -258,6 +259,7 @@ export default ({getImages}) => {
           pattern="^\\+?[\\d ()-]+$"
           required
         />
+        <strong>Введите от 7 до 13 цифр</strong>
         <label for="ticket-phone">Телефон.</label>`,
       ],
       method: 'post',

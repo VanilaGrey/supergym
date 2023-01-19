@@ -1,6 +1,6 @@
 <form class="form {{ bemMix }}" action="{{ action }}" method="{{ method }}" data-form>
 	{% for group in fields %}
-		<p class="form__group">
+		<p class="form__group is-validable" data-group>
 			{{ group }}
 		</p>
 	{% endfor %}

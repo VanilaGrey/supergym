@@ -561,12 +561,14 @@
         <section class="content-group__item">
           <h2 class="content-group__heading heading">Бесплатное занятие</h2>
           <form class="form content-group__content" action="https://echo.htmlacademy.ru" method="post" data-form="">
-            <p class="form__group">
+            <p class="form__group is-validable" data-group="">
               <input id="ticket-name" name="name" type="text" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё\- ]+$" required="">
+              <strong>Пожалуйста, введите имя</strong>
               <label for="ticket-name">Имя.</label>
             </p>
-            <p class="form__group">
+            <p class="form__group is-validable" data-group="">
               <input id="ticket-phone" name="phone" type="tel" placeholder="Телефон" pattern="^\+?[\d ()-]+$" required="">
+              <strong>Введите от&nbsp;7 до&nbsp;13 цифр</strong>
               <label for="ticket-phone">Телефон.</label>
             </p>
             <button class="form__submit btn" type="submit">Отправить</button>
