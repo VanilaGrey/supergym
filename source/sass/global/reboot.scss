@@ -13,6 +13,7 @@
 
 html {
   min-width: 320px;
+  overflow-wrap: anywhere;
   scroll-behavior: smooth;
   font-size: $fz-default;
   line-height: 1.5;
@@ -46,7 +47,6 @@ video {
   height: auto;
 }
 
-// ios button \ inputs reset
 select,
 textarea,
 button,

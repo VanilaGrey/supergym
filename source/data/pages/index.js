@@ -79,8 +79,8 @@ export default ({getImages}) => {
       </p>`,
       image: getImages('about', {alt: 'Каким выглядит один из наших залов.'}),
       video: {
-        file: 'https://www.youtube.com/watch?v=9TZXsZItgdw',
         poster: getImages('about-video', {}, false, true),
+        youtube: '9TZXsZItgdw',
       },
     },
     subscriptions: {

@@ -71,15 +71,6 @@
   }
 }
 
-@mixin hover {
-  @media (hover: hover) {
-    &:hover,
-    &:hover:not(.focus-visible) {
-      @content;
-    }
-  }
-}
-
 @mixin custom-scrollbar($color-thumb, $color-track, $size: 4px) {
   scrollbar-color: $color-thumb $color-track;
   scrollbar-width: thin;
@@ -98,6 +89,15 @@
     background-color: $color-thumb;
     border: none;
     border-radius: calc($size / 4);
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover,
+    &:hover:not(.focus-visible) {
+      @content;
+    }
   }
 }
 
@@ -169,12 +169,6 @@
 
 @mixin vp-1249 {
   @media (max-width: ($vp-1250 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1099 {
-  @media (max-width: ($vp-1100 - 1px)) {
     @content;
   }
 }
