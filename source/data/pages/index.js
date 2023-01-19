@@ -1,3 +1,4 @@
+
 const addTariffLink = (tariff) =>
   Object.assign(tariff, {
     link: {
@@ -61,7 +62,7 @@ export default ({getImages}) => {
       label: 'Омск',
       link: {
         title: 'Купить абонемент',
-        utl: '#!',
+        url: '#price-section__inner',
       },
       image: getImages('promo', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
       title: 'Фитнес центр',

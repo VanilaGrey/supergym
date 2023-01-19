@@ -1,4 +1,7 @@
-<section class="price-section {{ bemMix }}" {{ decor ? background(decor) }}>
+<section class="price-section {{ bemMix }}"
+	{{ id ? 'id="' ~ id ~ '"' }}
+	{{ decor ? background(decor) }}
+	>
 	<div class="price-section__inner {{ decor ? 'price-section__inner--decor' }} container">
 		<h2 class="price-section__heading heading">{{ data.heading }}</h2>
 		{{ content ?? ''}}
