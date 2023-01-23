@@ -34,6 +34,12 @@
   }
 }
 
+.contacts__item {
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
 .contacts__key {
   margin: 0 0 4px;
   font-weight: 700;

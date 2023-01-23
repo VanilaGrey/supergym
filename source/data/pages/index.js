@@ -64,7 +64,7 @@ export default ({getImages}) => {
         title: 'Купить абонемент',
         url: '#price-section__inner',
       },
-      image: getImages('promo', {alt: 'Каким Вы можете стать благодаря нам.'}, false, false),
+      image: getImages('promo', {alt: 'Каким Вы можете стать благодаря нам.'}, true, false),
       title: 'Фитнес центр',
     },
     about: {
@@ -80,12 +80,12 @@ export default ({getImages}) => {
       </p>`,
       image: getImages('about', {alt: 'Каким выглядит один из наших залов.'}),
       video: {
-        poster: getImages('about-video', {}, false, true),
+        poster: getImages('about-video', {}, true, true),
         youtube: '9TZXsZItgdw',
       },
     },
     subscriptions: {
-      decor: getImages('wheels', {}, false, true),
+      decor: getImages('wheels', {}, true, true),
       heading: 'Абонементы',
       groups: [
         {
@@ -267,12 +267,16 @@ export default ({getImages}) => {
     },
     contacts: {
       heading: 'Контакты',
-      list: [
-        ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
-        ['Телефон:', '<a href="tel:+78005555555">8-800-555-55-55</a>'],
-        ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
-        ['Email:', '<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>'],
-      ].map(([key, value]) => ({key, value})),
+      lists: [
+        [
+          ['Адрес:', 'г. Омск, ул. 60 лет Октября, 7'],
+          ['График работы:', 'Пн-Вс: с 8:00 до 22:00'],
+        ],
+        [
+          ['Телефон:', '<a href="tel:+78005555555">8-800-555-55-55</a>'],
+          ['Email:', '<a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>'],
+        ],
+      ].map((list) => list.map(([key, value]) => ({key, value}))),
     },
   };
 };

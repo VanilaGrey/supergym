@@ -828,7 +828,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 18px;
 }
 
-.about-section__picture {
+.about-section__image {
   align-self: end;
   margin: 0;
 }
@@ -1771,7 +1771,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .ad__figure .ad__content {
-  padding: 34px 45px 44px;
+  padding: 34px 45px 42px;
   color: #ffffff;
   background-color: #ed0233;
 }
@@ -2073,8 +2073,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .advantages {
+    padding: 92px calc(50% - 591px) 89px 0;
     margin-left: 0;
-    padding-right: 0;
   }
 }
 
@@ -2082,6 +2082,11 @@ input[type=number]::-webkit-inner-spin-button {
   .page__heading--alter {
     margin-bottom: 32px;
     text-align: center;
+    margin-left: -6px;
+  }
+
+  .page__heading--reviews {
+    margin-bottom: 41px;
   }
 
   .page-header {
@@ -2131,7 +2136,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .page__ad {
-    margin-bottom: 95px;
+    margin-bottom: 91px;
   }
 
   .page__reviews {
@@ -2213,6 +2218,7 @@ input[type=number]::-webkit-inner-spin-button {
   .about-section__content h2 {
     font-size: 42px;
     line-height: 50px;
+    margin-left: -16px;
   }
 
   .about-section__content p {
@@ -2237,7 +2243,7 @@ input[type=number]::-webkit-inner-spin-button {
     clip-path: inset(100%);
   }
 
-  .about-section__picture {
+  .about-section__image {
     justify-self: center;
   }
 
@@ -2355,6 +2361,10 @@ input[type=number]::-webkit-inner-spin-button {
     gap: 30px;
   }
 
+  .advantages__heading {
+    margin-left: -22px;
+  }
+
   .advantages__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 27px 30px;
@@ -2396,11 +2406,12 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .ad__heading {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
+    margin-left: -6px;
   }
 
   .ad__list {
-    gap: 30px;
+    gap: 31px;
   }
 
   .ad__item {
@@ -2422,11 +2433,11 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .content-group__heading {
-    margin-bottom: 32px;
+    margin-bottom: 17px;
   }
 
   .content-group__item {
-    padding: 61px 84px 62px 133px;
+    padding: 61px 84px 46px 133px;
   }
 
   .content-group__item:nth-child(4n) .content-group__heading,
@@ -2500,6 +2511,10 @@ input[type=number]::-webkit-inner-spin-button {
     width: 420px;
     height: 444px;
   }
+
+  .price-section__heading {
+    margin-left: -10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2533,7 +2548,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .page__ad {
-    margin-bottom: 63px;
+    margin-bottom: 61px;
   }
 
   .page__reviews {
@@ -2645,6 +2660,10 @@ input[type=number]::-webkit-inner-spin-button {
     bottom: 36px;
   }
 
+  .price-section {
+    padding: 54px 0 70px;
+  }
+
   .card {
     padding-top: 43px;
     padding-bottom: 47px;
@@ -2731,6 +2750,10 @@ input[type=number]::-webkit-inner-spin-button {
     height: 15px;
   }
 
+  .advantages {
+    padding: 65px calc(50% - 591px) 64px 0;
+  }
+
   .advantages__list {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -2775,6 +2798,11 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 0;
   }
 
+  .ad__heading {
+    margin-bottom: 43px;
+    margin-left: -6px;
+  }
+
   .ad__list {
     grid-template-columns: 1fr;
   }
@@ -2788,7 +2816,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .ad__content {
-    padding: 28px 28px 38px;
+    padding: 28px 28px 39px;
     text-align: center;
   }
 
@@ -2835,6 +2863,7 @@ input[type=number]::-webkit-inner-spin-button {
   .content-group__item {
     padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 62px;
   }
 
   .content-group__item:nth-child(4n) .content-group__heading,
@@ -2869,6 +2898,10 @@ input[type=number]::-webkit-inner-spin-button {
 
   .contacts::before {
     content: none;
+  }
+
+  .contacts__item {
+    margin: 0;
   }
 
   .page-footer__inner {
@@ -2926,7 +2959,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-right: 30px;
   }
 
-  .about-section__picture {
+  .about-section__image {
     margin-right: -15px;
     margin-left: -15px;
   }

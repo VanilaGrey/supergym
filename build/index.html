@@ -30,7 +30,8 @@
         <a class="promo__btn btn" href="#price-section__inner">Купить абонемент</a>
         <p class="promo__image">
           <picture>
-            <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
             <img src="img/promo.jpg" srcset="img/promo@2x.jpg 2x" alt="Каким Вы можете стать благодаря нам." loading="lazy">
           </picture>
         </p>
@@ -63,14 +64,14 @@
         <div class="about-section__video">
           <div class="video" data-video="">
             <div class="video__player" id="9TZXsZItgdw" data-youtube=""></div>
-            <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" data-control="" data-lazy-style="--bg-default: url('../img/about-video.jpg');--bg-default2x: url('../img/about-video@2x.jpg');--bg-webp: url('../img/about-video.webp');--bg-webp2x: url('../img/about-video@2x.webp');--bg-webpMobile: url('../img/about-video-mobile.webp');--bg-webpMobile2x: url('../img/about-video-mobile@2x.webp');">
+            <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" data-control="" data-lazy-style="--bg-default: url('../img/about-video.jpg');--bg-default2x: url('../img/about-video@2x.jpg');--bg-webp: url('../img/about-video.webp');--bg-webp2x: url('../img/about-video@2x.webp');--bg-webpTablet: url('../img/about-video-tablet.webp');--bg-webpTablet2x: url('../img/about-video-tablet@2x.webp');--bg-webpMobile: url('../img/about-video-mobile.webp');--bg-webpMobile2x: url('../img/about-video-mobile@2x.webp');">
               <span class="visually-hidden">Проиграть видео.</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="price-section page__price-section" id="price-section__inner" data-lazy-style="--bg-default: url('../img/wheels.jpg');--bg-default2x: url('../img/wheels@2x.jpg');--bg-webp: url('../img/wheels.webp');--bg-webp2x: url('../img/wheels@2x.webp');--bg-webpMobile: url('../img/wheels-mobile.webp');--bg-webpMobile2x: url('../img/wheels-mobile@2x.webp');">
+      <section class="price-section page__price-section" id="price-section__inner" data-lazy-style="--bg-default: url('../img/wheels.jpg');--bg-default2x: url('../img/wheels@2x.jpg');--bg-webp: url('../img/wheels.webp');--bg-webp2x: url('../img/wheels@2x.webp');--bg-webpTablet: url('../img/wheels-tablet.webp');--bg-webpTablet2x: url('../img/wheels-tablet@2x.webp');--bg-webpMobile: url('../img/wheels-mobile.webp');--bg-webpMobile2x: url('../img/wheels-mobile@2x.webp');">
         <div class="price-section__inner price-section__inner--decor container">
           <h2 class="price-section__heading heading">Абонементы</h2>
           <div class="tabs no-js price-section__body" data-tabs="">
@@ -491,7 +492,7 @@
       </section>
 
       <section class="page__reviews container">
-        <h2 class="page__heading page__heading--review heading">Отзывы</h2>
+        <h2 class="page__heading page__heading--alter page__heading--reviews heading">Отзывы</h2>
         <div class="slider no-js page__slider" data-slider="">
           <div class="slider__body slider__body--shadow" data-slider-body="">
             <ul class="slider__list ">
@@ -577,24 +578,20 @@
 
         <section class="content-group__item">
           <h2 class="content-group__heading heading">Контакты</h2>
-          <dl class="contacts content-group__content">
-            <div>
+          <div class="contacts content-group__content">
+            <dl class="contacts__item">
               <dt class="contacts__key">Адрес:</dt>
               <dd class="contacts__value">г. Омск, ул.&nbsp;60 лет Октября, 7</dd>
-            </div>
-            <div>
-              <dt class="contacts__key">Телефон:</dt>
-              <dd class="contacts__value"><a href="tel:+78005555555">8-800-555-55-55</a></dd>
-            </div>
-            <div>
               <dt class="contacts__key">График работы:</dt>
               <dd class="contacts__value">Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</dd>
-            </div>
-            <div>
+            </dl>
+            <dl class="contacts__item">
+              <dt class="contacts__key">Телефон:</dt>
+              <dd class="contacts__value"><a href="tel:+78005555555">8-800-555-55-55</a></dd>
               <dt class="contacts__key">Email:</dt>
               <dd class="contacts__value"><a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></dd>
-            </div>
-          </dl>
+            </dl>
+          </div>
         </section>
       </div>
     </main>
@@ -605,33 +602,35 @@
           <span class="visually-hidden">На&nbsp;главную.</span>
           <img src="img/svg/logo.svg" width="119" height="23" alt="Логотип SUPERGYM.">
         </a>
-        <ul class="nav page-footer__nav">
-          <li>
-            <a class="nav__link" href="#!">
-              Услуги
-            </a>
-          </li>
-          <li>
-            <a class="nav__link" href="#!">
-              Абонементы
-            </a>
-          </li>
-          <li>
-            <a class="nav__link" href="#!">
-              Акции
-            </a>
-          </li>
-          <li>
-            <a class="nav__link" href="#!">
-              Тренеры
-            </a>
-          </li>
-          <li>
-            <a class="nav__link" href="#!">
-              Расписание
-            </a>
-          </li>
-        </ul>
+        <nav class="page-footer__nav-wrapper">
+          <ul class="nav page-footer__nav">
+            <li>
+              <a class="nav__link" href="#!">
+                Услуги
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#!">
+                Абонементы
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#!">
+                Акции
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#!">
+                Тренеры
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="#!">
+                Расписание
+              </a>
+            </li>
+          </ul>
+        </nav>
         <ul class="socials page-footer__socials">
           <li class="socials__item">
             <a class="socials__link socials__link--vk" href="#!">
