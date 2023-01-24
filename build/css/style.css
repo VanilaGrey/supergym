@@ -642,6 +642,11 @@ input[type=number]::-webkit-inner-spin-button {
   text-align: left;
 }
 
+.page__heading--reviews {
+  text-align: center;
+  margin-bottom: 37px;
+}
+
 .page__price-section {
   margin-bottom: 120px;
 }
@@ -1833,11 +1838,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .content-group__heading {
-  margin: 0 0 37px;
+  margin: 0 0 22px;
 }
 
 .content-group__item {
-  padding: 55px calc(100% - 580px) 65px 120px;
+  padding: 55px calc(100% - 583px) 48px 124px;
   border-top: 1px solid #74819c;
 }
 
@@ -2073,8 +2078,8 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .advantages {
-    padding: 92px calc(50% - 591px) 89px 0;
     margin-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -2359,6 +2364,11 @@ input[type=number]::-webkit-inner-spin-button {
 
   .slider.no-js .slider__list {
     gap: 30px;
+  }
+
+  .advantages {
+    padding: 92px calc(50% - 591px) 89px 0;
+    margin-left: 0;
   }
 
   .advantages__heading {
