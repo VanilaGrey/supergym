@@ -20,6 +20,7 @@ export default () => ({
     return image;
   },
   projectName: 'SUPERGYM',
+  description: 'Сайт омского спортивного клуба SUPERGYM.',
   navLinks: [
     {
       url: '#!',
