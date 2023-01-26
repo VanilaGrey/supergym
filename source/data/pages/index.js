@@ -85,7 +85,7 @@ export default ({getImages}) => {
       },
     },
     subscriptions: {
-      decor: getImages('wheels', {}, true, true),
+      decor: getImages('wheels', {}, true, false),
       heading: 'Абонементы',
       groups: [
         {
