@@ -723,6 +723,7 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  width: 150px;
 }
 
 .page-header__promo {
