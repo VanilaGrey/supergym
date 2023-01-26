@@ -91,14 +91,10 @@
 }
 
 .about-section__image {
-  align-self: end;
+  align-self: center;
   margin: 0;
 
-  @include vp-1199 {
-    justify-self: center;
-  }
-
-  @include vp-424 {
+  @include vp-767 {
     margin-right: -15px;
     margin-left: -15px;
   }
@@ -107,21 +103,17 @@
 .about-section__video {
   position: absolute;
   right: calc(40400% / 1250);
-  bottom: 119px;
+  bottom: 15%;
   width: calc(36400% / 1250);
 
   @include vp-1199 {
     right: 50%;
     bottom: 100px;
-    width: 266px;
+    width: 35%;
     transform: translateX(50%);
   }
 
   @include vp-767 {
-    bottom: 36px;
-  }
-
-  @include vp-424 {
     position: static;
     width: auto;
     margin: 6px -15px 0;

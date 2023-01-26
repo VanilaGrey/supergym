@@ -84,9 +84,16 @@
 
 .event__picture {
   margin: 0;
+  height: 100%;
+
 
   img {
     object-fit: cover;
+    height: 100%;
+
+    @include vp-767 {
+      max-width: 290px;
+    }
 
     @include vp-424 {
       min-height: 292px;
