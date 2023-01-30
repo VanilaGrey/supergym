@@ -1,16 +1,15 @@
 .about-section {
-  position: relative;
   display: grid;
   grid-template-columns: 415fr 660fr;
   gap: 85px;
   padding-top: 120px;
-  padding-bottom: 234px;
+  padding-bottom: 120px;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
     gap: 44px;
     padding-top: 60px;
-    padding-bottom: 183px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
@@ -91,32 +90,33 @@
 }
 
 .about-section__image {
-  align-self: center;
-  margin: 0;
+  @include vp-1199 {
+    img {
+      margin: 0 auto;
+    }
+  }
 
   @include vp-767 {
     margin-right: -15px;
     margin-left: -15px;
+
+    img {
+      width: 100%;
+    }
   }
 }
 
 .about-section__video {
-  position: absolute;
-  right: calc(40400% / 1250);
-  bottom: 15%;
-  width: calc(36400% / 1250);
+  width: calc(36400% / 660);
+  margin: -113px 0 0 -63px;
 
   @include vp-1199 {
-    right: 50%;
-    bottom: 100px;
-    width: 35%;
-    transform: translateX(50%);
+    width: calc(26600% / 678);
+    margin: -84px auto 0;
   }
 
   @include vp-767 {
-    position: static;
     width: auto;
-    margin: 6px -15px 0;
-    transform: none;
+    margin: 40px 0 0;
   }
 }
